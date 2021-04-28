@@ -41,6 +41,12 @@ clearViews.addEventListener("click", () => {
     showImageContainer();
 });
 
+// Handling clicks on the tabs in the description section
+tabsContainer.addEventListener("click", function (e) {
+    const clicked = e.target.closest(".description-tab");
+
+    if (!clicked) return;
+
 document.body.onload = loadMap();
 
 function loadMap() {
