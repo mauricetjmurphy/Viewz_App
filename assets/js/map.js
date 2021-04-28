@@ -61,6 +61,54 @@ tabsContainer.addEventListener("click", function (e) {
         .classList.add("description-content-active");
 });
 
+// Creates a new view object , hides the form and shows the page numbers
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    newView();
+    showImageContainer();
+});
+
+viewImg.addEventListener("change", function (e) {
+    // Converts the file into a data URL
+    const reader = new FileReader();
+
+    reader.addEventListener("load", () => {
+        uploadedImage = reader.result;
+
+        localStorage.setItem("recent-image", reader.result);
+    });
+
+    reader.readAsDataURL(this.files[0]);
+});
+
+// Creates a new view object , hides the form and shows the page numbers
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    newView();
+    showImageContainer();
+});
+
+// Move map marker to selected view and display  popup
+cardContainer.addEventListener("click", moveToMarker);
+
+// Use some listener function to listen for a click on a element with a matching class name
+document.addEventListener("click", someListener);
+
+// Helper function that closes the popup modall
+function someListener(e) {
+    let el = e.target;
+    if (el.classList.contains("close-btn")) {
+        popUp.classList.add("hidden");
+        let allSections = Array.from(document.querySelectorAll("section"));
+
+        allSections.forEach((e) => e.classList.remove("blur"));
+        popUp.innerHTML = "";
+    }
+}
+
+// Call the functions
+getLocalStorage();
+
 document.body.onload = loadMap();
 
 function loadMap() {
