@@ -271,3 +271,12 @@ function reset() {
     localStorage.removeItem("views");
     location.reload();
 }
+
+// Check if the views array has data in it. If not the view display section will be hidden
+function showImageContainer() {
+    if (views.length === 0) {
+        imageContainer.classList.add("hidden");
+    } else {
+        imageContainer.classList.remove("hidden");
+    }
+}
