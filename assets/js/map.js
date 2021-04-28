@@ -33,3 +33,61 @@ class View {
         this.description = description;
     }
 }
+
+//Event Listeners
+// Clear the views from the views section
+clearViews.addEventListener("click", () => {
+    reset();
+    showImageContainer();
+});
+
+document.body.onload = loadMap();
+
+function loadMap() {
+    // showImageContainer();
+
+    map = L.map("map").setView([51.505, -0.09], 5);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
+        attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    map.addEventListener("click", function (mapE) {
+        mapEvent = mapE;
+        const { lat, lng } = mapEvent.latlng;
+        pinWarning.classList.add("hidden");
+
+        var inputs = document.getElementsByTagName("input");
+        var textarea = document.getElementsByTagName("textarea");
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].disabled = false;
+        }
+        textarea[0].disabled = false;
+        submit.disabled = false;
+
+        // If a marker is already placed remove it and add the new one on click
+        if (marker) {
+            map.removeLayer(marker);
+        }
+
+        marker = L.marker([lat, lng])
+            .addTo(map)
+            .bindPopup(
+                L.popup({
+                    maxWidth: 250,
+                    minWidth: 100,
+                    autoClose: false,
+                    closeOnClick: false,
+                    className: "view-popup",
+                })
+            );
+    });
+
+    // Renders a marker for every view saved in local storage
+    views.forEach((view) => {
+        renderViewMarker(view);
+    });
+
+    displayList(views, cardContainer, rows, current_page);
+}
