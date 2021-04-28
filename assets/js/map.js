@@ -206,3 +206,16 @@ function paginationButton(page, views) {
     });
     return button;
 }
+
+// Getting locallly stored data from the Local Storage API
+function getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem("views"));
+
+    if (!data) return;
+
+    views = data;
+
+    views.forEach((view) => {
+        displayList(views, cardContainer, rows, current_page);
+    });
+}
