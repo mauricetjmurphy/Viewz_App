@@ -177,3 +177,13 @@ function displayList(views, wrapper, rows_per_page, page) {
         setUpPagination(views, pagination_element, rows);
     }
 }
+
+// Setting up pagination. Page buttons display based on the number of view objects in the array and the Rows variable.
+function setUpPagination(views, wrapper, rows_per_page) {
+    pagination_element.innerHTML = "";
+    let page_count = Math.ceil(views.length / rows_per_page);
+    for (let i = 1; i < page_count + 1; i++) {
+        let btn = paginationButton(i, views);
+        wrapper.appendChild(btn);
+    }
+}
