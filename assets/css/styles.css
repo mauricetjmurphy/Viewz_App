@@ -444,3 +444,75 @@ div.card-body {
     background-color: var(--bg-color-primary);
     box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* ----------Footer---------- */
+footer {
+    height: 500px;
+    background: #37383d;
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.sign-up p {
+    text-align: center;
+    width: 80vw;
+    color: var(--bg-color-gradOne);
+    font-size: 2rem;
+    padding: 25px;
+    margin: 30px 0 0 0;
+}
+
+.sign-up-container {
+    margin-top: 60px;
+}
+
+.sign-up-btn {
+    height: 40px;
+    padding: 5px 70px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 184, 0, 1) 25%,
+        rgba(255, 143, 0, 1) 75%
+    );
+    color: #fff;
+    line-height: 40px;
+    font-size: 20px;
+
+    text-decoration: none;
+}
+
+.sign-up-btn:hover {
+    background: #fff;
+    border: 1px solid #ff8f00;
+    color: #ff8f00;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 120px;
+}
+
+.social-container i {
+    margin: 0 30px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.copyright {
+    color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+}
