@@ -137,5 +137,66 @@
         </section>
 
         <section id="map"></section>
+
+        <section class="form-container">
+            <div>
+                <p class="drop-pin">
+                    Please first drop a pin on the location of your view
+                </p>
+            </div>
+            <form id="form" class="upload-form" action="#">
+                <label for="img-upload">Upload your image</label>
+                <input
+                    class="img-upload"
+                    type="file"
+                    name="img-upload"
+                    id="img-upload"
+                    required
+                    disabled
+                />
+
+                <label for="name">Location</label>
+                <input
+                    class="viewName"
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    min="2"
+                    maxlength="50"
+                    disabled
+                />
+
+                <label for="date">Whats date was the image taken?</label>
+                <input
+                    class="viewDate"
+                    type="date"
+                    name="date"
+                    id="date"
+                    required
+                    disabled
+                />
+
+                <label for="description"
+                    >Please write a few lines about your experiance (You must
+                    write a minimum of 200 characters)</label
+                >
+                <textarea
+                    class="viewDescription"
+                    name="description"
+                    id="description"
+                    cols="30"
+                    rows="10"
+                    required
+                    minlength="200"
+                    maxlength="1200"
+                    disabled
+                ></textarea>
+
+                <button class="submit-upload" type="submit" disabled>
+                    Upload
+                </button>
+            </form>
+        </section>
     </body>
 </html>
