@@ -322,3 +322,125 @@ textarea {
 input::placeholder {
     color: var(--bg-color-text);
 }
+
+/*<---------Views--------->*/
+
+.clear-views {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    height: 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #fff;
+    background: var(--bg-color-primary);
+}
+
+.view-container {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 184, 0, 1) 25%,
+        rgba(255, 143, 0, 1) 75%
+    );
+    margin: 0;
+    height: 440px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.cards {
+    height: 365px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 184, 0, 1) 25%,
+        rgba(255, 143, 0, 1) 75%
+    );
+}
+
+.card-title {
+    margin-top: 25px !important;
+    font-size: 14px !important;
+}
+
+.card {
+    width: 250px;
+    height: 280px;
+    border-radius: 15px !important;
+    cursor: pointer;
+    border: 1px solid var(--bg-color-primary);
+}
+
+.card-img-top {
+    height: 200px !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+div.card-body {
+    margin: 0;
+    padding: 0;
+}
+
+.card h1 {
+    font-size: 0.8rem;
+    margin: 5px 5px;
+    padding: 0;
+}
+
+.card p {
+    font-size: 0.8rem;
+    margin: 5px 5px;
+    padding: 0;
+}
+
+.active {
+    background: var(--bg-color-primary);
+}
+
+.not-active {
+    background: var(--bg-color-secondary);
+}
+
+.pagenumbers {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 184, 0, 1) 25%,
+        rgba(255, 143, 0, 1) 75%
+    );
+}
+
+.pagenumbers button {
+    width: 25px;
+    height: 25px;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--bg-color-secondary);
+    margin: 5px;
+    transition: 0.4s;
+    color: #fff;
+    font-size: 10px;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pagenumbers button:hover {
+    background-color: var(--bg-color-secondary);
+}
+
+.pagenumbers button.active {
+    background-color: var(--bg-color-primary);
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
