@@ -20,3 +20,16 @@ let pos;
 let uploadedImage;
 let current_page = 1;
 let rows = 4;
+
+class View {
+    date = new Date();
+    id = (Date.now() + "").slice(-10);
+
+    constructor(coords, image, location, date, description) {
+        this.coords = coords;
+        this.image = image;
+        this.location = location;
+        this.date = date;
+        this.description = description;
+    }
+}
