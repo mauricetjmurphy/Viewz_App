@@ -260,3 +260,8 @@ function moveToMarker(e) {
     allSections.forEach((e) => e.classList.add("blur"));
     popUp.classList.remove("blur");
 }
+
+//Set the local storage with current data
+function setLocalStorage() {
+    localStorage.setItem("views", JSON.stringify(views));
+}
