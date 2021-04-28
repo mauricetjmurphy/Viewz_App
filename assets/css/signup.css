@@ -70,3 +70,137 @@ label {
 .navbar-right a {
     font-size: 2rem;
 }
+
+/*------------Section 2------------*/
+.s2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1200px;
+    background: var(--grey-dark-bg-2);
+}
+
+.s2-ss1 {
+    padding: 100px 0 0 50px;
+    width: 80vw;
+    font-size: 0;
+}
+
+.s2-ss1 p {
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.new-member {
+    background: var(--red-bg-color-1);
+    border: 1px solid var(--white-bg-1);
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.return-member {
+    border: 1px solid var(--white-bg-1);
+    background-color: var(--grey-dark-bg-2);
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.s2-ss2 {
+    background: var(--grey-dark-bg-3);
+    height: 800px;
+    width: 80vw;
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.input-container {
+    margin-bottom: 40px;
+}
+
+.s2-ss2 h1,
+.s2-ss3 h1,
+.s2-ss4 h1 {
+    padding-bottom: 15px;
+}
+
+.s2 input[type="text"],
+.s2 input[type="email"],
+.s2 input[type="date"],
+.s2 input[type="password"] {
+    border: 0;
+    color: #000;
+    border-bottom: 1px solid #c4c4c4;
+    width: 90%;
+    height: 40px;
+    background: var(--grey-dark-bg-3);
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.4);
+}
+
+i.icon-success {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: 1px solid var(--white-bg-1);
+    background: var(--white-bg-1);
+    color: green !important;
+}
+
+i.icon-error {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    border-radius: 50%;
+    border: 1px solid var(--white-bg-1);
+    background: var(--white-bg-1);
+    color: red !important;
+}
+
+.error-message {
+    display: block;
+    color: red;
+}
+
+.input-error {
+    border: 1px solid red !important;
+}
+
+.s2-ss3 {
+    width: 80vw;
+    background: var(--grey-dark-bg-3);
+    padding: 50px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.create-account {
+    margin: 15px 0 0 15px;
+    background: var(--bg-color-gradOne);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 180px;
+    color: #fff;
+}
+
+.create-account:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid var(--bg-color-gradOne);
+}
+
+.thank-you {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--grey-dark-bg-2);
+    font-size: 2rem;
+    padding: 200px 100px;
+    text-align: center;
+}
