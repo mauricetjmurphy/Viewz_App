@@ -91,3 +91,18 @@ function loadMap() {
 
     displayList(views, cardContainer, rows, current_page);
 }
+
+function renderViewMarker(view) {
+    L.marker(view.coords)
+        .addTo(map)
+        .bindPopup(
+            L.popup({
+                maxWidth: 250,
+                minWidth: 100,
+                autoClose: false,
+                closeOnClick: false,
+                className: "view-popup",
+            })
+        )
+        .setPopupContent();
+}
