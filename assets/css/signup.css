@@ -16,3 +16,57 @@
     padding: 0;
     font-size: 14px;
 }
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+label {
+    color: var(--bg-color-text);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/*<---------Navbar--------->*/
+.main-nav {
+    height: 70px;
+    width: 100vw;
+    background: linear-gradient(
+        90deg,
+        var(--bg-color-gradOne) 25%,
+        var(--bg-color-gradTwo) 75%
+    );
+}
+
+.navbar-mid {
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.navbar-mid a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-item {
+    padding-left: 20px;
+}
+
+.navbar-right {
+    font-size: 2rem;
+    width: 100px;
+}
+
+.navbar-right a {
+    font-size: 2rem;
+}
