@@ -187,3 +187,22 @@ function setUpPagination(views, wrapper, rows_per_page) {
         wrapper.appendChild(btn);
     }
 }
+
+// Creating the page button
+function paginationButton(page, views) {
+    let button = document.createElement("button");
+    button.innerText = page;
+
+    if (current_page == page) button.classList.add("active");
+
+    button.addEventListener("click", function () {
+        current_page = page;
+        displayList(views, cardContainer, rows, current_page);
+
+        let current_btn = document.querySelector(".pagenumbers button.active");
+        current_btn.classList.remove("active");
+
+        button.classList.add("active");
+    });
+    return button;
+}
