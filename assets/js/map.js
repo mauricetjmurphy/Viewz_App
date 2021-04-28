@@ -219,3 +219,44 @@ function getLocalStorage() {
         displayList(views, cardContainer, rows, current_page);
     });
 }
+
+// Zooms the map to the selected view and displays a pop-up with the view details.
+function moveToMarker(e) {
+    const viewEl = e.target.closest(".card");
+
+    if (!viewEl) return;
+
+    const view = views.find((view) => view.id === viewEl.dataset.id);
+
+    let html = `
+      <div class="modal-header">
+        <div class="title">
+        <h2>${view.location}<h2/> 
+        <p style="display: inline; font-size: 1rem;">${view.date}</p>
+        </div>
+        <button id="close-btn" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img-container" style="background-image: url(${view.image}); background-position: center; background-size: cover;"></div>
+        <div class="modal-text-container">
+        <h2>Description</h2>
+        <p>${view.description}</p>
+        </div>
+      </div>
+      <div class="modal-footer"></div>
+  `;
+
+    map.setView(view.coords, 18, {
+        animate: true,
+        pan: {
+            duration: 1,
+        },
+    });
+    popUp.innerHTML = "";
+    popUp.insertAdjacentHTML("afterbegin", html);
+    popUp.classList.remove("hidden");
+    popUp.scrollIntoView();
+    let allSections = Array.from(document.querySelectorAll("section"));
+    allSections.forEach((e) => e.classList.add("blur"));
+    popUp.classList.remove("blur");
+}
