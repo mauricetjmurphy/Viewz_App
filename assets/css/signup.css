@@ -276,3 +276,19 @@ footer {
     align-items: flex-end;
     padding: 10px;
 }
+
+@media only screen and (max-width: 950px) {
+    .footer-top {
+        display: flex;
+    }
+
+    .footer-content-container {
+        text-align: center;
+        width: 50%;
+    }
+
+    .footer-social-container {
+        width: 50%;
+        text-align: center;
+    }
+}
