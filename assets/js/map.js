@@ -47,6 +47,20 @@ tabsContainer.addEventListener("click", function (e) {
 
     if (!clicked) return;
 
+    // Remove active tab class
+    tabs.forEach((t) => t.classList.remove("description-tab-active"));
+    tabsContent.forEach((e) =>
+        e.classList.remove("description-content-active")
+    );
+
+    // Active tab
+    clicked.classList.add("description-tab-active");
+
+    document
+        .querySelector(`.description-content-${clicked.dataset.tab}`)
+        .classList.add("description-content-active");
+});
+
 document.body.onload = loadMap();
 
 function loadMap() {
