@@ -265,3 +265,9 @@ function moveToMarker(e) {
 function setLocalStorage() {
     localStorage.setItem("views", JSON.stringify(views));
 }
+
+//Clear all data in local storgae
+function reset() {
+    localStorage.removeItem("views");
+    location.reload();
+}
