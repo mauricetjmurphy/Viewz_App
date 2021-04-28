@@ -644,3 +644,73 @@ footer {
         height: 100px;
     }
 }
+
+@media only screen and (max-width: 555px) {
+    .hero-img-container {
+        background-image: url("../imgs/hero.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #section-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .description-tab-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .description-tab {
+        margin: 10px 0;
+    }
+
+    .view-container {
+        height: 1340px;
+    }
+
+    .cards {
+        height: 1265px;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popUp {
+        height: 700px !important;
+    }
+
+    .modal-header {
+        height: 100px;
+    }
+
+    .modal-body {
+        height: 500px;
+    }
+
+    .modal-footer {
+        height: 100px;
+    }
+
+    .modal-img-container {
+        height: 200px;
+    }
+
+    .modal-text-container {
+        height: 200px;
+    }
+
+    .modal-text-container h2 {
+        padding-top: 15px;
+    }
+
+    .upload-description {
+        height: 400px;
+    }
+}
