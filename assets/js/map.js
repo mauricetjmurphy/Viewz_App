@@ -106,3 +106,44 @@ function renderViewMarker(view) {
         )
         .setPopupContent();
 }
+
+// Creates a new view object and saves it to an array and then local storage.
+function newView() {
+    //Get data from the form
+    const { lat, lng } = mapEvent.latlng;
+    const image = uploadedImage;
+    const name = viewName.value;
+    const date = viewDate.value;
+    const description = viewDescription.value;
+
+    //Create the view object
+    const view = new View([lat, lng], image, name, date, description);
+
+    //Add new object the views array
+    views.push(view);
+
+    // Render view location on map as marker
+    renderViewMarker(view);
+
+    // Render view vocation on list
+    displayList(views, cardContainer, rows, current_page);
+
+    // Set local storage to all workouts
+    setLocalStorage();
+
+    // revealViews();
+    setUpPagination(views, pagination_element, rows);
+    // Clear inputs
+    viewName.value = viewImg.value = viewDate.value = viewDescription.value =
+        "";
+
+    var inputs = document.getElementsByTagName("input");
+    var textarea = document.getElementsByTagName("textarea");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].disabled = true;
+    }
+    textarea[0].disabled = true;
+    submit.disabled = true;
+
+    pinWarning.classList.remove("hidden");
+}
