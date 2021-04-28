@@ -596,3 +596,51 @@ footer {
 .blur {
     filter: blur(10px);
 }
+
+@media only screen and (max-width: 1100px) {
+    .view-container {
+        height: 690px;
+    }
+
+    .cards {
+        height: 615px;
+    }
+
+    .popUp {
+        height: 700px;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+        height: 500px !important;
+    }
+
+    .modal-text-container h2 {
+        padding-top: 15px;
+    }
+
+    .modal-text-container {
+        height: 400px;
+    }
+
+    .modal-img-container {
+        height: 300px;
+    }
+
+    .modal-text-container {
+        height: 300px;
+    }
+
+    .modal-header {
+        height: 100px;
+    }
+
+    .modal-body {
+        height: 700px;
+    }
+
+    .modal-footer {
+        height: 100px;
+    }
+}
