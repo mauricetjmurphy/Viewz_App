@@ -61,12 +61,6 @@ tabsContainer.addEventListener("click", function (e) {
         .classList.add("description-content-active");
 });
 
-// Creates a new view object , hides the form and shows the page numbers
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    newView();
-    showImageContainer();
-});
 
 viewImg.addEventListener("change", function (e) {
     // Converts the file into a data URL
