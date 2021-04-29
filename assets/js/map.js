@@ -337,6 +337,7 @@ function setLocalStorage() {
 //Clear all data in local storgae
 function reset() {
     localStorage.removeItem("views");
+    views = [];
     location.reload();
 }
 
