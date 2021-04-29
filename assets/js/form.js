@@ -87,3 +87,13 @@ const validateInputs = () => {
         ? validateElm(confirmPassword)
         : invalidateEml(confirmPassword);
 };
+
+newMembersForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    isValidationOn = true;
+    validateInputs();
+    if (isFormValid) {
+        sectionTwo.remove();
+        thankYou.classList.remove("hidden");
+    }
+});
