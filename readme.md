@@ -127,6 +127,10 @@ The wireframes for the page layout in both mobile and desktop are available belo
 
 # Testing
 
+## Javascript testing
+
+I carried out some unit testing using the behavior-driven development framework, Jasmine. Some of the applications key functions were selected for testing. I used a seperate html file to link the Jasmine CDN files and to display the test results. All tests passed.
+
 ## User stories testing
 
 -   View upload form has been tested to check if the user can upload their data to the site.
