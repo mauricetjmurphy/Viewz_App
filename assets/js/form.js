@@ -36,3 +36,8 @@ const resetElm = (elm) => {
     const error = elm.parentElement.querySelector(".error-message");
     error.classList.add("hidden");
 };
+
+const validateElm = (elm) => {
+    const successIcon = elm.parentElement.querySelector(".icon-success");
+    successIcon.classList.remove("hidden");
+};
