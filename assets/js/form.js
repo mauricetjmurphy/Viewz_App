@@ -63,3 +63,27 @@ fields.forEach((field) => {
         validateInputs();
     });
 });
+
+// Reset all inputs errors and re-check if they are valid
+const validateInputs = () => {
+    if (!isValidationOn) return;
+    resetElm(firstName);
+    resetElm(lastName);
+    resetElm(email);
+    resetElm(dob);
+    resetElm(password);
+    resetElm(confirmPassword);
+
+    isFormValid = true;
+
+    firstName.value ? validateElm(firstName) : invalidateEml(firstName);
+    lastName.value ? validateElm(lastName) : invalidateEml(lastName);
+    isValidEmail(email.value) ? validateElm(email) : invalidateEml(email);
+    dob.value ? validateElm(dob) : invalidateEml(dob);
+    password.value.length >= 8
+        ? validateElm(password)
+        : invalidateEml(password);
+    confirmPassword.value === password.value && confirmPassword.value !== ""
+        ? validateElm(confirmPassword)
+        : invalidateEml(confirmPassword);
+};
