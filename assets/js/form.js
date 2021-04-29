@@ -28,3 +28,11 @@ const isValidEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 };
+
+const resetElm = (elm) => {
+    elm.classList.remove("input-error");
+    const errorIcon = elm.parentElement.querySelector(".icon-error");
+    errorIcon.classList.add("hidden");
+    const error = elm.parentElement.querySelector(".error-message");
+    error.classList.add("hidden");
+};
