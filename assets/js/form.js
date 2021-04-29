@@ -9,3 +9,14 @@ const dob = document.querySelector("#dob");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPassword");
 const thankYou = document.querySelector(".thank-you");
+
+//Validation variables
+const newMembersForm = document.getElementById("new-members-form");
+const fields = [
+    "#firstName",
+    "#lastName",
+    "#email",
+    "#dob",
+    "#password",
+    "#confirmPassword",
+];
