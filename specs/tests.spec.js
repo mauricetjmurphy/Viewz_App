@@ -16,7 +16,7 @@ describe("checks if the email is valid", () => {
         const result = true;
 
         // assert
-        expect(email).toMatch(re);
+        expect(email).toMatch(re) == result;
     });
 });
 
